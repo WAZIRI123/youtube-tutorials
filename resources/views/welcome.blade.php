@@ -1102,36 +1102,7 @@
             <div class="h-full bg-gray-200 p-8">
                 <!-- start::Table -->
                 <div class="bg-white rounded-lg px-8 py-6 overflow-x-scroll custom-scrollbar">
-                    <h4 class="text-xl font-semibold mt-3 mb-3">Users</h4>
-                    <a href="{{ route('pdf') }}" class="button bg-primary hover:bg-primary-dark rounded-lg px-6 py-1.5 text-gray-100 hover:shadow-xl transition duration-150">Print</a>
-                    <table class="w-full mb-8 mt-3 whitespace-nowrap">
-                        <thead class="bg-secondary text-gray-100 font-bold">
-                            <tr>
-
-                            <td class="py-2 pl-2">
-                                Name
-                            </td>
-                            <td class="py-2 pl-2">
-                                Email
-                            </td>
-
-                        </tr></thead>
-                        <tbody class="text-sm">
-@foreach ($user as $user )
-<tr class="bg-gray-200 hover:bg-primary hover:bg-opacity-20 transition duration-200">
-
-    <td class="py-3 pl-2 capitalize">
-        {{ $user->name }}
-    </td>
-    <td class="py-3 pl-2">
-       {{ $user->email }}
-    </td>
-</tr>
-@endforeach
-                      
-                            </tr>
-                        </tbody>
-                    </table>
+                 @include('partials.form')
                 </div>
                 <!-- end::Table -->
             </div>
